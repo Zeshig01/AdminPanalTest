@@ -52,8 +52,8 @@
 }
 
 .tab.active {
-  color: #333;
-  background-color: #2A3958;
+  color: white;
+  background-color: #5A6A8A;
   border-bottom-color: #2A3958;
   font-weight: 600;
 }
