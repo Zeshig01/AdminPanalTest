@@ -1,0 +1,130 @@
+/* MemberList.css */
+.member-list {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.member-list table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.member-list th {
+  padding: 15px 10px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #E6E8EA;
+  white-space: nowrap;
+}
+
+.member-list td {
+  padding: 15px 10px;
+  border-bottom: 1px solid #E6E8EA;
+  color: #5A616A;
+  white-space: nowrap;
+}
+
+.member-list tr:hover {
+  background-color: #F8F9FA;
+}
+
+/* Checkbox styling */
+.checkbox-column {
+  width: 40px;
+  text-align: center;
+}
+
+.checkbox-column input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border: 1px solid #E6E8EA;
+  border-radius: 4px;
+  appearance: none;
+  background-color: #fff;
+  position: relative;
+}
+
+.checkbox-column input[type="checkbox"]:checked {
+  background-color: #6F80A0;
+  border-color: #6F80A0;
+}
+
+.checkbox-column input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* ID column */
+.id-column {
+  width: 60px;
+  text-align: center;
+}
+
+/* Status badge */
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  min-width: 80px;
+}
+
+.status-badge.waiting {
+  background-color: #FFF4E5;
+  color: #FF9800;
+}
+
+.status-badge.approved {
+  background-color: #E8F5E9;
+  color: #4CAF50;
+}
+
+.status-badge.rejected {
+  background-color: #FFEBEE;
+  color: #F44336;
+}
+
+/* Action buttons */
+.actions-column {
+  width: 80px;
+  text-align: center;
+}
+
+.view-button {
+  padding: 6px 12px;
+  background-color: #F0F2F5;
+  border: 1px solid #E6E8EA;
+  border-radius: 8px;
+  color: #5A616A;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-button:hover {
+  background-color: #E6E8EA;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .member-list {
+    overflow-x: scroll;
+  }
+  
+  .member-list table {
+    min-width: 700px;
+  }
+}

@@ -1,0 +1,115 @@
+/* Pagination.css */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 5px;
+}
+
+.pagination-button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #E6E8EA;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #F0F2F5;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.first-page {
+  background-image: url('../../assets/images/double-chevron-left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.prev-page {
+  background-image: url('../../assets/images/arrow-chevron-left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.next-page {
+  background-image: url('../../assets/images/arrow-chevron-right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.last-page {
+  background-image: url('../../assets/images/double-chevron-right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 5px;
+}
+
+.page-number {
+  min-width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #E6E8EA;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #5A616A;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-number:hover:not(.active):not(.ellipsis) {
+  background-color: #F0F2F5;
+}
+
+.page-number.active {
+  background-color: #6F80A0;
+  color: white;
+  border-color: #6F80A0;
+}
+
+.page-number.ellipsis {
+  border: none;
+  cursor: default;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .pagination {
+    flex-wrap: wrap;
+  }
+  
+  .page-numbers {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
